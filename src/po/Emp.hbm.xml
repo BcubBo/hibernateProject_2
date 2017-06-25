@@ -26,5 +26,8 @@
         <property name="comm" type="java.lang.Double">
             <column name="COMM" precision="7" />
         </property>
+        <property name="deptno" type="java.lang.Byte">
+        	<column name="DEPTNO" precision="0"/>
+        </property>
     </class>
 </hibernate-mapping>
