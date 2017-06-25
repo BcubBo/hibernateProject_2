@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<hibernate-configuration>
+		<session-factory>
+			<!-- 数据库链接 -->
+			<property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+			<property name="connection.url">jdbc:oracle:thin:@localhost:1521:bcubbo</property>
+			<!-- url -->
+			<property name="connection.username">bcubbo2</property>
+			<!-- username -->
+			<property name="connection.password">BcubBo001</property>
+			<!-- password -->
+			<!-- 辅助参数 ,方言-->
+			<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+			<!-- format_sql将语句进行格式化，防止输出过长 -->
+			<property name="format_sql">true</property>
+			<!-- 将执行的sql语句进行输出 -->
+			<property name="show_sql">true</property>
+			<property name="current_session_context_class">thread</property>
+			<!-- 一个线程创建一个会话不冲突的设定 -->
+			<!-- 映射文件 -->
+			
+			<!-- <mapping resource="po/User.hbm.xml"/> -->
+			<!-- <mapping resource="po/House.hbm.xml"/>
+				<mapping resource="po/Type.hbm.xml"/>
+			 -->
+			<mapping resource="po/Emp.hbm.xml"></mapping>				
+		</session-factory>
+	
+	
+	</hibernate-configuration>
