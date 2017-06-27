@@ -31,6 +31,11 @@ public class Emp implements java.io.Serializable {
 		this.empno = empno;
 		this.ename = ename;
 	}
+	public Emp(String ename,String job){
+		
+		this.job = job;
+		this.ename = ename;
+	}
 
 	public Short getEmpno() {
 		return this.empno;

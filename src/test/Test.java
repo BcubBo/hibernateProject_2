@@ -17,11 +17,11 @@ public class Test {
 		
 		Map<String,Object> emp = new HashMap<String,Object>();
 		
-		/*emp.put("job", "CLERK");
+		emp.put("job", "CLERK");
 		emp.put("sal", 1000.00);
 		
 		
-		//1985-1-3 留 14:12:15 不留
+		//1985-1-3 留 ，14:12:15 不留
 		DateFormat fmt = DateFormat.getDateInstance();
 		//只转换日期部分
 		
@@ -38,11 +38,11 @@ public class Test {
 			e.printStackTrace();
 			
 			
-		}*/
+		}
 		
 		
-		List<Emp> result = biz.findEmpByConditions(emp);
-		List<Emp> resultByPage = biz.findByPage(null);
+/*		List<Emp> result = biz.findEmpByConditions(emp);
+		List<Emp> resultByPage = biz.findByPage(emp);
 		
 		for(Emp e:result){
 			
@@ -54,11 +54,41 @@ public class Test {
 		for(Emp split:resultByPage){
 			
 			
-			System.out.println(split.getEname()+"   "+split.getDeptno()+"    "+split.getJob()+"    "+split.getComm()+"    "+split.getEmpno());
+			System.out.println(split.getEname()+"       "+split.getDeptno()+"        "+split.getJob()+"        "+split.getComm()+"        "+split.getEmpno());
 			
 			
 			
-		}
+		}*/
+		
+		System.out.println("----------------------------------------------------------------");		
+		List<Object[]> result1 = biz.findTest1();
+		for(Object[] row:result1){
+			
+			System.out.println(row[0] + "\t" + row[1]);
+			
+			
+		}//
+		
+		
+		
+		System.out.println("----------------------------------------------------------------");		
+		List<Object> result2 = biz.findTest2();
+		for(Object row:result2){
+			
+			System.out.println(row);
+			
+			
+		}//
+		
+		System.out.println("----------------------------------------------------------------");		
+		List<Emp> result3 = biz.findTest3();
+		for(Emp e:result3){
+			
+			System.out.println(e.getEname()+"\t"+e.getJob());
+			
+			
+		}//
+		
 	}
 	
 	
