@@ -29,7 +29,7 @@ public class HibernateSessionFactory {
 	
 	public static Session getSession(){
 		//旧版本方法 sessionFactory.openSession();
-		//和线程进行了绑定，比买你多用户取得同一会话，要保证唯一性
+		//和线程进行了绑定，避免多用户取得同一会话，要保证唯一性
 		return sessionFactory.getCurrentSession();
 		
 		
